@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".NavigationActivity">
+
+	<LinearLayout
+		android:id="@+id/labelLayout"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<TextView
+			android:id="@+id/fromLabel"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="\tYou're Closest To" />
+
+		<TextView
+			android:id="@+id/toLabel"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="\t\tYour next exhibit" />
+
+		<ImageButton
+			android:id="@+id/imageButton2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@null"
+			android:onClick="onGearClicked"
+			app:srcCompat="@drawable/ic_menu" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/titleLayout"
+		android:layout_width="0dp"
+		android:layout_height="60dp"
+		android:orientation="horizontal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/labelLayout">
+
+		<TextView
+			android:id="@+id/fromTitle"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="8dp"
+			android:layout_marginRight="4dp"
+			android:layout_weight="1"
+			android:text="Calculating"
+			android:textColor="@color/base2Color"
+			android:textSize="24dp" />
+
+		<TextView
+			android:id="@+id/toTitle"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="4dp"
+			android:layout_marginRight="8dp"
+			android:layout_weight="1"
+			android:text="Calculating"
+			android:textColor="@color/base2Color"
+			android:textSize="24dp" />
+	</LinearLayout>
+
+	<!--	<TextView-->
+<!--		android:id="@+id/pathDirections"-->
+<!--		android:layout_width="0dp"-->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:layout_marginLeft="12dp"-->
+<!--		android:layout_marginTop="8dp"-->
+<!--		android:layout_marginRight="12dp"-->
+<!--		android:lineSpacingExtra="2dp"-->
+<!--		android:text="paths"-->
+<!--		android:textColor="@color/base3Color"-->
+<!--		android:textSize="14dp"-->
+<!--		app:layout_constraintEnd_toEndOf="parent"-->
+<!--		app:layout_constraintHorizontal_bias="0.0"-->
+<!--		app:layout_constraintStart_toStartOf="parent"-->
+<!--		app:layout_constraintTop_toBottomOf="@+id/directionsLabel" />-->
+
+	<TextView
+		android:id="@+id/directionsLabel"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="8dp"
+		android:text="Directions"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/titleLayout" />
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/pathDirections"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="8dp"
+		android:scrollbars="vertical"
+		android:scrollbarSize="5dp"
+		android:fadeScrollbars="false"
+		app:layout_constrainedHeight="true"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHeight_max="280dp"
+		app:layout_constraintHorizontal_bias="0.533"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/directionsLabel" />
+
+	<TextView
+		android:id="@+id/planLabel"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginVertical="8dp"
+		android:layout_marginStart="12dp"
+		android:layout_marginEnd="8dp"
+		android:text="Remaining Plan"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/pathDirections" />
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/planRecycler"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginEnd="8dp"
+		android:scrollbars="vertical"
+		android:scrollbarSize="5dp"
+		android:fadeScrollbars="false"
+		app:layout_constraintBottom_toTopOf="@+id/mockBtn"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/planLabel" />
+
+	<LinearLayout
+		android:id="@+id/buttonLayout"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginBottom="8dp"
+		android:orientation="horizontal"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent">
+
+		<Button
+			android:id="@+id/endPlanBtn"
+			style="@style/ButtonStyleRemove"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="4dp"
+			android:layout_weight="1"
+			android:text="Finish Plan"
+			android:textColor="@drawable/button_text_add" />
+
+		<Button
+			android:id="@+id/backBtn"
+			style="@style/ButtonStyleAdd"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="4dp"
+			android:layout_weight="1"
+			android:text="Back"
+			android:textColor="@color/white" />
+
+		<Button
+			android:id="@+id/skipBtn"
+			style="@style/ButtonStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="4dp"
+			android:layout_weight="1"
+			android:text="Skip"
+			android:textColor="@color/base2Color" />
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/mockBtn"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:text="Mock"
+		app:layout_constraintBottom_toTopOf="@+id/buttonLayout"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

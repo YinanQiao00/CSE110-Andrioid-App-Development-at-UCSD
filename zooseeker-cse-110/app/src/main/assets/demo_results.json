@@ -1,0 +1,12 @@
+[
+  {"name": "A", "location": "ABC",  "distance": "100m", "order": 1},
+  {"name": "B", "location": "DEF",  "distance": "200m", "order": 2},
+  {"name": "C", "location": "GHI",  "distance": "300m", "order": 3},
+  {"name": "D", "location": "JKL",  "distance": "400m", "order": 4},
+  {"name": "E", "location": "MNO",  "distance": "500m", "order": 5},
+  {"name": "F", "location": "PQR",  "distance": "600m", "order": 6},
+  {"name": "G", "location": "STU",  "distance": "700m", "order": 7},
+  {"name": "H", "location": "VWX",  "distance": "800m", "order": 8},
+  {"name": "I", "location": "YZ1",  "distance": "900m", "order": 9},
+  {"name": "J", "location": "234",  "distance": "1000m", "order": 10}
+]

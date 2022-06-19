@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+<!--        <item name="base1Color">@color/base1Color</item>-->
+<!--        <item name="base2Color">@color/base2Color</item>-->
+<!--        <item name="base3Color">@color/base3Color</item>-->
+<!--        <item name="accent1Color">@color/accent1Color</item>-->
+<!--        <item name="accent2Color">@color/accent2Color</item>-->
+<!--        <item name="accent3Color">@color/accent3Color</item>-->
+        <!-- stack overflow 29311078 -->
+    </style>
+    <style name="ButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_style</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="ButtonStyleAdd" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_style_add</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="ButtonStyleRemove" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_style_remove</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="ButtonStyleDisabled" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_style_remove</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="ExhibitCardAdded" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/card_added</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="ExhibitCardNotAdded" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/card_not_added</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="CardBase" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/card_base</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="DropdownItemStyle" parent="android:Widget.TextView.SpinnerItem">
+
+    </style>
+</resources>

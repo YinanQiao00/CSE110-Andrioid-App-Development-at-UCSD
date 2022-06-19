@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlanActivity">
+
+    <ImageButton
+        android:id="@+id/plan_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="Back"
+        android:background="@mipmap/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/my_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="My Plan"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/plan_back_button"
+        app:layout_constraintTop_toBottomOf="@+id/plan_back_button" />
+
+    <TextView
+        android:id="@+id/num_exhibits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/base2Color"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/my_list"
+        app:layout_constraintEnd_toStartOf="@id/items" />
+
+    <TextView
+        android:id="@+id/items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text=" item(s)"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/my_list"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/plan_add_button"
+        style="@style/ButtonStyleAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Add"
+        android:textColor="@drawable/button_text_add"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/clear_button"
+        app:layout_constraintTop_toTopOf="@id/plan_back_button" />
+
+    <Button
+        android:id="@+id/clear_button"
+        style="@style/ButtonStyleRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="Clear"
+        android:textColor="@drawable/button_text_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/plan_back_button" />
+
+    <Button
+        android:id="@+id/Start_Plan_button"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
+        android:text="Start Plan"
+        android:textColor="@drawable/button_text"
+        app:layout_constraintEnd_toEndOf="@+id/clear_button"
+        app:layout_constraintStart_toStartOf="@+id/plan_add_button"
+        app:layout_constraintTop_toBottomOf="@+id/clear_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/plan_exhibit_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="@id/items"
+        app:layout_constraintStart_toStartOf="@id/my_list"
+        app:layout_constraintTop_toBottomOf="@+id/my_list" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:onClick="onGearClicked"
+        app:srcCompat="@drawable/ic_menu"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@id/clear_button"
+        app:layout_constraintEnd_toEndOf="@id/clear_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
